@@ -1,15 +1,28 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
+
+import media from "../../utils/mediaQueries.style";
 
 export const Form = styled.form`
-  width: 400px;
-  height: 540px;
+  height: 540px;  
+  width: 400px; 
   background: #fff;
   border-radius: 8px;
-  box-shadow: 0 0px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+  box-shadow: 0 0px 20px rgba(0, 0, 0, 0.19), 0 0px 6px rgba(0, 0, 0, 0.23);
   margin: calc(30vh - 220px) auto;
   padding: 40px 60px;
-  max-width: calc(100vw - 40px);
   box-sizing: border-box;
+
+  ${media.tablet`
+    width: 75vw;
+  `}
+
+  ${media.phone`
+    width: 80vw;  
+    margin: 5vw;
+    padding: 15px 15px;    
+    font-size: 0.8em;
+    height: 430px;
+  `}
 `;
 
 export const Title = styled.h3`
@@ -50,6 +63,10 @@ export const Input = styled.input`
   :focus {
     border-bottom: 2px solid #123456;
   }
+
+  ${media.phone`
+    width: 100%;
+  `};
 `;
 
 export const Label = styled.p`
