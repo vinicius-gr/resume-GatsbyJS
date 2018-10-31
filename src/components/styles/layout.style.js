@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import media from '../../utils/mediaQueries.style';
+import media from "../../utils/mediaQueries.style";
 
 export const Wrapper = styled.div`
   * {
@@ -32,6 +32,7 @@ export const BodyWrapper = styled.div`
 export const FooterWrapper = styled.div`
   bottom: 0;
   width: 100vw;
+  color: #123456;
 `;
 
 export const Header = styled.div`
@@ -59,7 +60,7 @@ export const Header = styled.div`
 
 export const Footer = styled.div`
   width: 50vw;
-  margin: 0 auto;
+  margin: 60px auto;
 
   * {
     text-align: center;
@@ -68,33 +69,29 @@ export const Footer = styled.div`
 
 export const SocialMedias = styled.ul`
   list-style: none;
-
-  :hover {
-    svg {
-      color: #999;
-    }
-  }
+  margin: 0;
 `;
 
 export const IconLi = styled.li`
-  display: inline;
-  margin: 15px;
+  display: inline-block;
+  margin: 50px 20px -60px 0;
+  margin-right:  20px;
   font-size: 20px;
 
   a {
-    color: #666;
+    color: #123456;
   }
 
   a:visited {
     text-decoration: none;
-    color: #666;
+    color: #123456;
   }
   svg:hover {
     text-decoration: none;
-    color: #333 !important;
+    color: #123456;
   }
   a:focus {
     text-decoration: none;
-    color: #333;
+    color: #123456;
   }
 `;
