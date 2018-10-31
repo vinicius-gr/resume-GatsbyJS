@@ -1,4 +1,6 @@
 import React from "react";
+import { graphql } from "gatsby";
+
 import {
   FaNodeJs,
   FaHtml5,
@@ -22,22 +24,19 @@ import {
   Skills
 } from "./styles/index.style";
 
-export default props => (
+export default ({ data }) => (
   <Layout>
     <About>
-      <Photo />
-      <Name>Vinicius Gonzaga Rocha</Name>
-      <Subtitle>Full Stack Developer / Photographer</Subtitle>
-      <Bio>
-        Hi there! I'm Computer Science student who loves to build new things and
-        capture moments of life that deserve to be recordered. I'm also a
-        cooking enthusiast always trying new foods. I'm from a very small
-        country called Brazil, and we have a lot o places to travel down here!
-      </Bio>
+      <Photo src={data.prismicAbout.data.image.url} />
+      <Name>{data.prismicAbout.data.title.text}</Name>
+      <Subtitle>{data.prismicAbout.data.subtitle.text}</Subtitle>
+      <Bio>{data.prismicAbout.data.description.text}</Bio>
 
-      <hr style={{ margin: "20px" }}/>
+      <hr style={{ margin: "20px" }} />
 
-      <Subtitle style={{ margin: "25px" }}>These are some of my Skills</Subtitle>
+      <Subtitle style={{ margin: "25px" }}>
+        These are some of my Skills
+      </Subtitle>
       <Skills>
         <li>
           <FaNodeJs />
@@ -73,3 +72,24 @@ export default props => (
     </About>
   </Layout>
 );
+
+export const query = graphql`
+  {
+    prismicAbout(uid: { eq: "about-vinicius" }) {
+      data {
+        title {
+          text
+        }
+        subtitle {
+          text
+        }
+        description {
+          text
+        }
+        image {
+          url
+        }
+      }
+    }
+  }
+`;

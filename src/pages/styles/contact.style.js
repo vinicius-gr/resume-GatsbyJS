@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled from "styled-components";
 
 import media from "../../utils/mediaQueries.style";
 
@@ -29,22 +29,22 @@ export const Title = styled.h3`
   margin: 10px 0;
   padding-bottom: 10px;
   width: 180px;
-  color: #123456;
-  border-bottom: 3px solid #123456;
+  color: #333;
+  border-bottom: 3px solid #333;
 `;
 
 export const Button = styled.input`
   float: right;
   padding: 8px 12px;
   margin: 8px 0 0;
-  border: 2px solid #123456;
+  border: 2px solid #333;
   background: 0;
-  color: #123456;
+  color: #333;
   cursor: pointer;
   transition: all 0.3s;
 
   :hover {
-    background: #123456;
+    background: #333;
     color: #fff;
   }
 `;
@@ -58,10 +58,11 @@ export const Input = styled.input`
   resize: none;
   border: 0;
   transition: all 0.3s;
-  border-bottom: 2px solid #123456;
+  font-size: 15px;
+  border-bottom: 2px solid #333;
 
   :focus {
-    border-bottom: 2px solid #123456;
+    border-bottom: 2px solid #333;
   }
 
   ${media.phone`
@@ -75,6 +76,6 @@ export const Label = styled.p`
     display: block;
     margin: 28px 0 0;
     font-size: 14px;
-    color: #123456;
+    color: #333;
   }
 `;

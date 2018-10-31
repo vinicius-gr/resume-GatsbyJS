@@ -19,24 +19,23 @@ export const HeaderWrapper = styled.div`
 `;
 
 export const BodyWrapper = styled.div`
-  width: 50vw;
+  width: 50%;
   margin: 0 auto;
   padding: 25px;
-  height: 100%;
 
-  ${media.desktop`width: 50vw;`}
-  ${media.tablet`width: 75vw;`}
-  ${media.phone`width: 100vw; padding: 5vw;`}
+  ${media.desktop`width: 50%;`}
+  ${media.tablet`width: 75%;`}
+  ${media.phone`width: 95%; padding: 5%;`}
 `;
 
 export const FooterWrapper = styled.div`
   bottom: 0;
-  width: 100vw;
-  color: #123456;
+  width: 100%;
+  color: #333;
 `;
 
 export const Header = styled.div`
-  width: 50vw;
+  width: 50%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -46,20 +45,20 @@ export const Header = styled.div`
   }
 
   h5 {
-    color: rgb(18, 52, 86);
+    color: #333;
     text-decoration: none;
     display: inline-block;
     text-align: center;
     margin: 0;
   }
 
-  ${media.desktop`width: 50vw;`}
-  ${media.tablet`width: 75vw;`}
-  ${media.phone`width: 95vw;`}
+  ${media.desktop`width: 50%;`}
+  ${media.tablet`width: 75%;`}
+  ${media.phone`width: 95%;`}
 `;
 
 export const Footer = styled.div`
-  width: 50vw;
+  width: 50%;
   margin: 60px auto;
 
   * {
@@ -74,24 +73,23 @@ export const SocialMedias = styled.ul`
 
 export const IconLi = styled.li`
   display: inline-block;
-  margin: 50px 20px -60px 0;
-  margin-right:  20px;
+  margin:  20px;
   font-size: 20px;
 
   a {
-    color: #123456;
+    color: #333;
   }
 
   a:visited {
     text-decoration: none;
-    color: #123456;
+    color: #333;
   }
   svg:hover {
     text-decoration: none;
-    color: #123456;
+    color: #333;
   }
   a:focus {
     text-decoration: none;
-    color: #123456;
+    color: #333;
   }
 `;

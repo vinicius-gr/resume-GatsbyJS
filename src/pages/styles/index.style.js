@@ -7,11 +7,12 @@ export const About = styled.div`
   align-items: center;
   width: 450px;
   margin: 0 auto;
-  color: #123456;
+  color: #333;
 `;
 
 export const Photo = styled.img`
   border-radius: 50%;
+  border: 3px solid #333;
   height: 200px;
   width: 200px;
   margin: 0 auto;
@@ -25,7 +26,7 @@ export const Name = styled.h1`
 
 export const Subtitle = styled.h4`
   text-align: center;
-    color: #526B84;
+    color: #666;
 `;
 
 export const Bio  = styled.p`
