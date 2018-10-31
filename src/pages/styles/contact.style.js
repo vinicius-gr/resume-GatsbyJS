@@ -33,7 +33,7 @@ export const Title = styled.h3`
   border-bottom: 3px solid #123456;
 `;
 
-export const Button = styled.button`
+export const Button = styled.input`
   float: right;
   padding: 8px 12px;
   margin: 8px 0 0;
