@@ -20,6 +20,8 @@
     "react-typography": "^0.16.13",
     "styled-components": "^4.0.2",
     "typography": "^0.16.17",
+    "typography-theme-elk-glen": "^0.16.9",
+    "typography-theme-fairy-gates": "^0.15.11",
     "typography-theme-lincoln": "^0.15.11"
   }
 }
