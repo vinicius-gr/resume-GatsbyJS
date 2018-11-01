@@ -1,12 +1,11 @@
 import styled from "styled-components";
 
-import media from "../../utils/mediaQueries.style";
+import media from "../../utils/medias.style";
 
 export const Form = styled.form`
   height: 540px;  
   width: 400px; 
   background: #fff;
-  border-radius: 8px;
   box-shadow: 0 0px 20px rgba(0, 0, 0, 0.19), 0 0px 6px rgba(0, 0, 0, 0.23);
   margin: calc(30vh - 220px) auto;
   padding: 40px 60px;
@@ -17,9 +16,9 @@ export const Form = styled.form`
   `}
 
   ${media.phone`
-    width: 80vw;  
-    margin: 5vw;
-    padding: 15px 15px;    
+    width: 100%;  
+    margin: auto;
+    padding: 25px;    
     font-size: 0.8em;
     height: 430px;
   `}
@@ -71,7 +70,7 @@ export const Input = styled.input`
 `;
 
 export const Label = styled.p`
-  :before {
+  ::before {
     content: attr(type);
     display: block;
     margin: 28px 0 0;

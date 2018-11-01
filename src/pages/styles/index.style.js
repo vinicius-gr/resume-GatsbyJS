@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+import media from '../../utils/medias.style';
+
 export const About = styled.div`
   padding-top: 100px;
   display: grid;
@@ -8,6 +10,11 @@ export const About = styled.div`
   width: 450px;
   margin: 0 auto;
   color: #333;
+
+  ${media.phone`
+    width: 100%;
+    padding-top: 5px;
+  `}
 `;
 
 export const Photo = styled.img`
@@ -22,6 +29,10 @@ export const Photo = styled.img`
 export const Name = styled.h1`
   text-align: center;
   margin: 25px;
+
+  ${media.phone`
+    font-size: 27px;
+  `}
 `;
 
 export const Subtitle = styled.h4`
@@ -41,6 +52,9 @@ export const Skills = styled.ul`
   grid-template-columns: repeat(4, 1fr);
   margin: 20px auto;
   grid-gap: 20px 70px;
-
   font-size: 28px;
+
+  ${media.phone`
+  grid-gap: 20px 50px;
+  `}
 `;

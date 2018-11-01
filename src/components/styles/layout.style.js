@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-import media from "../../utils/mediaQueries.style";
+import media from "../../utils/medias.style";
 
 export const Wrapper = styled.div`
   * {
