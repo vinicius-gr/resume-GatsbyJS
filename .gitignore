@@ -55,8 +55,9 @@ typings/
 .yarn-integrity
 
 # dotenv environment variables file
-.env
+.env.*
 
 .cache/
 public
 yarn-error.log
+

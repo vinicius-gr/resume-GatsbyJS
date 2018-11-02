@@ -1,42 +1,23 @@
 import React from "react";
 import { graphql } from "gatsby";
 
-import {
-  FaNodeJs,
-  FaHtml5,
-  FaCss3Alt,
-  FaJs,
-  FaJava,
-  FaReact,
-  FaAngular,
-  FaCameraRetro,
-  FaGit,
-  FaPython
-} from "react-icons/fa";
-
 import Layout from "../components/layout";
-import {
-  About,
-  Photo,
-  Name,
-  Subtitle,
-  Bio,
-  Skills
-} from "./styles/index.style";
+import { About, Name, Subtitle, Bio } from "./styles/index.style";
 
 export default ({ data }) => (
   <Layout>
     <About>
-      <Name>{data.prismicAbout.data.title.text}</Name>
-      <Subtitle>{data.prismicAbout.data.subtitle.text}</Subtitle>
-      <Bio>{data.prismicAbout.data.description.text}</Bio>
+      <Name>{data.prismicProject.data.title.text}</Name>
+      <Subtitle>{data.prismicProject.data.subtitle.text}</Subtitle>
+      <Bio>{data.prismicProject.data.content1.text}</Bio>
+      <Bio>{data.prismicProject.data.content2.text}</Bio>
     </About>
   </Layout>
 );
 
 export const query = graphql`
   {
-    prismicAbout(uid: { eq: "about-vinicius" }) {
+    prismicProject(uid: { eq: "estella-and-ju" }) {
       data {
         title {
           text
@@ -44,11 +25,11 @@ export const query = graphql`
         subtitle {
           text
         }
-        description {
+        content1 {
           text
         }
-        image {
-          url
+        content2 {
+          text
         }
       }
     }
