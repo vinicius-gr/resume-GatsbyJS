@@ -2,16 +2,16 @@ import React from "react";
 import { graphql } from "gatsby";
 
 import Layout from "../components/layout";
-import { About, Name, Subtitle, Bio } from "./styles/index.style";
+import { Projects, Title, Subtitle, Content } from "./styles/lastProject.style";
 
 export default ({ data }) => (
   <Layout>
-    <About>
-      <Name>{data.prismicProject.data.title.text}</Name>
+    <Projects>
+      <Title>{data.prismicProject.data.title.text}</Title>
       <Subtitle>{data.prismicProject.data.subtitle.text}</Subtitle>
-      <Bio>{data.prismicProject.data.content1.text}</Bio>
-      <Bio>{data.prismicProject.data.content2.text}</Bio>
-    </About>
+      <Content>{data.prismicProject.data.content1.text}</Content>
+      <Content>{data.prismicProject.data.content2.text}</Content>
+    </Projects>
   </Layout>
 );
 
